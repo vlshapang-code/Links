@@ -15,9 +15,9 @@
                  swap any of them later.
   3. META      : <title>, <meta name="description">, and the og:/twitter:
                  tags just below (swap YOUR_SITE_URL and the og-image path)
-  4. BOOKING   : the "Book Now" form near the end of <body> POSTs to a
-                 Formspree endpoint — replace YOUR_FORMSPREE_ENDPOINT there
-                 (see the comment right above the form for setup steps).
+  4. BOOKING   : the "Book Now" form near the end of <body> already POSTs to
+                 a live Formspree endpoint. See the comment right above the
+                 form if you ever need to point it at a different one.
 
   No build step, no frameworks, no JavaScript — the "Book Now" popout opens
   and closes with pure CSS (a URL-fragment trick), and the form POSTs
@@ -657,17 +657,11 @@
 </main>
 
 <!-- ============================================================================
-     BOOKING FORM — edit the endpoint below.
-     This form POSTs to Formspree (https://formspree.io), a third-party form
-     backend, since a static GitHub Pages site can't send email on its own.
-
-     1. Create a free account at formspree.io and a new form pointing at
-        whichever inbox should receive these (both Science and Music
-        requests land here together — the Interest field says which).
-     2. Copy the form endpoint it gives you, e.g. https://formspree.io/f/abcdwxyz
-     3. Replace YOUR_FORMSPREE_ENDPOINT below with that URL.
-     4. Formspree emails you to confirm the first time — approve that email
-        or submissions won't go through.
+     BOOKING FORM — POSTs to Formspree (https://formspree.io), a third-party
+     form backend, since a static GitHub Pages site can't send email on its
+     own. Both Science and Music requests land in the same inbox — the
+     Interest field on each submission says which. To point this at a
+     different Formspree form later, swap the action= URL below.
      ============================================================================ -->
 <div class="modal" id="schedule-modal" role="dialog" aria-modal="true" aria-labelledby="schedule-title">
   <a href="#page-top" class="modal-backdrop" aria-label="Close"></a>
@@ -678,7 +672,7 @@
     </div>
     <p class="modal-sub">Share a few details and I'll follow up to find a time.</p>
 
-    <form action="YOUR_FORMSPREE_ENDPOINT" method="POST" accept-charset="UTF-8">
+    <form action="https://formspree.io/f/mwvgjovg" method="POST" accept-charset="UTF-8">
       <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off">
       <input type="hidden" name="_subject" value="New booking request — Shapang Virtual Links">
       <input type="hidden" name="_next" value="https://vlshapang-code.github.io/Links/#page-top">

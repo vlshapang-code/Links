@@ -33,19 +33,14 @@ Optional: swap `og-image.png` for your own 1200×630 image to change the link-pr
 
 The first item in the link list opens a popout form (name, phone, a Music/Science
 dropdown, and a message) instead of navigating away. It's pure CSS/HTML — no JS —
-but since GitHub Pages can't run server code, actually delivering the email needs
-a third-party form backend:
-
-1. Create a free account at [formspree.io](https://formspree.io) and a new form.
-2. Set the form's target inbox to whichever email should receive requests (both
-   Science and Music requests land in the same inbox — the Interest field says which).
-3. Copy the endpoint it gives you (looks like `https://formspree.io/f/abcdwxyz`).
-4. In `index.html`, find `YOUR_FORMSPREE_ENDPOINT` (in the `<form action="...">`
-   near the end of the file, just before `</body>`) and replace it with that URL.
-5. Formspree emails you to confirm the very first submission — approve it, or
-   later submissions won't go through.
-
-Until step 4 is done, the button opens the form but submitting it won't go anywhere.
+but since GitHub Pages can't run server code, delivering the email needs a
+third-party form backend: it POSTs to [Formspree](https://formspree.io)
+(`<form action="...">` near the end of `index.html`, just before `</body>`).
+Both Science and Music requests land in the same Formspree inbox — the Interest
+field on each submission says which. Formspree required confirming the very
+first submission by email before later ones go through; if requests ever stop
+arriving, check that confirmation didn't get missed. To point the form at a
+different Formspree form later, swap the `action=` URL there.
 
 ## Enable GitHub Pages
 
