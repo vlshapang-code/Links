@@ -79,6 +79,7 @@
      #ffffff / #70b5f9 / #ff6a26 / #ff4141 / #a970ff / #e4405f (and their washes). */
   .row--schedule   { --brand: #b98cff; --wash: rgba(185, 140, 255, .16); }  /*  7.7:1 */
   .row--linkedin   { --brand: #e9e0ff; --wash: rgba(233, 224, 255, .10); }  /* 15.7:1 */
+  .row--epk        { --brand: #dacaff; --wash: rgba(218, 202, 255, .105); } /* 13.0:1 */
   .row--github     { --brand: #cbb4ff; --wash: rgba(203, 180, 255, .11); }  /* 10.8:1 */
   .row--soundcloud { --brand: #b18cff; --wash: rgba(177, 140, 255, .12); }  /*  7.6:1 */
   .row--instagram  { --brand: #9a6bff; --wash: rgba(154, 107, 255, .14); }  /*  5.5:1 */
@@ -556,6 +557,7 @@
     <symbol id="i-instagram" viewBox="0 0 24 24"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></symbol>
     <symbol id="i-arrow" viewBox="0 0 16 16"><path d="M4.5 11.5 11.5 4.5M6 4.5h5.5V10"/></symbol>
     <symbol id="i-schedule" viewBox="0 0 24 24"><rect x="3.25" y="5" width="17.5" height="15.5" rx="3"/><path d="M3.25 9.75h17.5M8 3v3.25M16 3v3.25"/><path d="m8.25 14 2.35 2.35L15.75 11"/></symbol>
+    <symbol id="i-epk" viewBox="0 0 24 24"><path d="M6.5 2.75h7.25L18.5 7.5v13.25a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1V3.75a1 1 0 0 1 1-1Z"/><path d="M13.5 2.75V7.5h5"/><path d="M8.5 12h7M8.5 15.25h7M8.5 18.5h4.5"/></symbol>
   </defs>
 </svg>
 
@@ -603,45 +605,54 @@
         </a>
       </li>
 
-      <li class="row row--github reveal" style="--i:5">
-        <a href="https://github.com/vlshapang-code" target="_blank" rel="noopener noreferrer me" aria-label="GitHub — opens in a new tab">
+      <li class="row row--epk reveal" style="--i:5">
+        <a href="EPK_Shapang_2026.pdf" target="_blank" rel="noopener" aria-label="Electronic Press Kit — opens PDF in a new tab">
           <span class="num" aria-hidden="true">03</span>
+          <svg class="glyph glyph--stroke" aria-hidden="true" focusable="false"><use href="#i-epk"></use></svg>
+          <span class="label">Electronic Press Kit</span>
+          <svg class="arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"></use></svg>
+        </a>
+      </li>
+
+      <li class="row row--github reveal" style="--i:6">
+        <a href="https://github.com/vlshapang-code" target="_blank" rel="noopener noreferrer me" aria-label="GitHub — opens in a new tab">
+          <span class="num" aria-hidden="true">04</span>
           <svg class="glyph" aria-hidden="true" focusable="false"><use href="#i-github"></use></svg>
           <span class="label">GitHub</span>
           <svg class="arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"></use></svg>
         </a>
       </li>
 
-      <li class="row row--soundcloud reveal" style="--i:6">
+      <li class="row row--soundcloud reveal" style="--i:7">
         <a href="https://soundcloud.com/voidlord-shapang" target="_blank" rel="noopener noreferrer me" aria-label="SoundCloud — opens in a new tab">
-          <span class="num" aria-hidden="true">04</span>
+          <span class="num" aria-hidden="true">05</span>
           <svg class="glyph" aria-hidden="true" focusable="false"><use href="#i-soundcloud"></use></svg>
           <span class="label">SoundCloud</span>
           <svg class="arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"></use></svg>
         </a>
       </li>
 
-      <li class="row row--instagram reveal" style="--i:7">
+      <li class="row row--instagram reveal" style="--i:8">
         <a href="https://www.instagram.com/vl.shapang" target="_blank" rel="noopener noreferrer me" aria-label="Instagram — opens in a new tab">
-          <span class="num" aria-hidden="true">05</span>
+          <span class="num" aria-hidden="true">06</span>
           <svg class="glyph" aria-hidden="true" focusable="false"><use href="#i-instagram"></use></svg>
           <span class="label">Instagram</span>
           <svg class="arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"></use></svg>
         </a>
       </li>
 
-      <li class="row row--youtube reveal" style="--i:8">
+      <li class="row row--youtube reveal" style="--i:9">
         <a href="https://www.youtube.com/@VL.Shapang" target="_blank" rel="noopener noreferrer me" aria-label="YouTube — opens in a new tab">
-          <span class="num" aria-hidden="true">06</span>
+          <span class="num" aria-hidden="true">07</span>
           <svg class="glyph" aria-hidden="true" focusable="false"><use href="#i-youtube"></use></svg>
           <span class="label">YouTube</span>
           <svg class="arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"></use></svg>
         </a>
       </li>
 
-      <li class="row row--twitch reveal" style="--i:9">
+      <li class="row row--twitch reveal" style="--i:10">
         <a href="https://www.twitch.tv/shapangg" target="_blank" rel="noopener noreferrer me" aria-label="Twitch — opens in a new tab">
-          <span class="num" aria-hidden="true">07</span>
+          <span class="num" aria-hidden="true">08</span>
           <svg class="glyph" aria-hidden="true" focusable="false"><use href="#i-twitch"></use></svg>
           <span class="label">Twitch</span>
           <svg class="arrow" aria-hidden="true" focusable="false"><use href="#i-arrow"></use></svg>
@@ -652,7 +663,7 @@
     </ul>
   </nav>
 
-  <p class="footer reveal" style="--i:10">Flock Fake Friends</p>
+  <p class="footer reveal" style="--i:11">Flock Fake Friends</p>
 
 </main>
 
