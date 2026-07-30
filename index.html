@@ -174,6 +174,55 @@
     color: var(--ink-soft);
   }
 
+  .contact {
+    margin: clamp(1.5rem, 6vw, 2rem) 0 0;
+    display: grid;
+    justify-items: center;
+    gap: .625rem;
+  }
+
+  .contact-phone {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: clamp(1.5rem, 7vw, 2.125rem);
+    letter-spacing: .01em;
+    color: var(--ink);
+    text-decoration: none;
+    transition: color .25s var(--ease);
+  }
+
+  .contact-emails {
+    display: grid;
+    gap: .5rem;
+  }
+
+  .contact-email {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: .5rem;
+    font-family: var(--mono);
+    font-size: clamp(.875rem, 3.6vw, 1.0625rem);
+    color: var(--ink-soft);
+    text-decoration: none;
+    transition: color .25s var(--ease);
+  }
+
+  .contact-tag {
+    font-size: .625rem;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+
+  .contact-phone:hover,
+  .contact-phone:focus-visible,
+  .contact-email:hover,
+  .contact-email:focus-visible {
+    color: var(--accent);
+  }
+
   .rule {
     margin: clamp(2rem, 8vw, 2.75rem) 0 clamp(1.25rem, 5vw, 1.5rem);
     height: 1px;
@@ -259,7 +308,9 @@
 
   /* visible, high-contrast focus ring that never relies on colour alone */
   .row a:focus-visible,
-  .footer a:focus-visible {
+  .footer a:focus-visible,
+  .contact-phone:focus-visible,
+  .contact-email:focus-visible {
     outline: 2px solid var(--accent);
     outline-offset: 3px;
   }
@@ -339,6 +390,14 @@
 
     <p class="tagline reveal" style="--i:2">MassMusic: High-resolution science, low-frequency bass.</p>
   </header>
+
+  <section class="contact reveal" style="--i:2.3" aria-label="Direct contact">
+    <a class="contact-phone" href="tel:+13177020596">317-702-0596</a>
+    <div class="contact-emails">
+      <a class="contact-email" href="mailto:CazyAaron@gmail.com"><span class="contact-tag">Science</span>CazyAaron@gmail.com</a>
+      <a class="contact-email" href="mailto:VL.Shapang@gmail.com"><span class="contact-tag">Music</span>VL.Shapang@gmail.com</a>
+    </div>
+  </section>
 
   <hr class="rule">
 
