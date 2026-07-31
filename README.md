@@ -54,8 +54,25 @@ different Formspree form later, swap the `action=` URL there.
 https://vlshapang-code.github.io/Links/
 ```
 
-That URL is what the NFC tag should point to. If you later add a custom domain,
-set it under the same Pages screen and point the tag at the domain instead.
+## Custom domain
+
+The site is set up to serve from **https://shapangg.com/** (root, not a subpath).
+The `CNAME` file in the repo root holds that domain — GitHub Pages reads it
+directly, so don't delete or rename it, and keep it as one line with no protocol
+(`shapangg.com`, not `https://shapangg.com`).
+
+Two things must both be true for the domain to work:
+
+1. **Repo side** — `CNAME` present (done), and the domain entered under
+   **Settings → Pages → Custom domain**.
+2. **DNS side** — at whoever registered `shapangg.com`, four `A` records on the
+   apex pointing at GitHub's Pages IPs (`185.199.108.153`, `185.199.109.153`,
+   `185.199.110.153`, `185.199.111.153`), plus optionally a `CNAME` record for
+   `www` pointing at `vlshapang-code.github.io`.
+
+Once DNS resolves, tick **Enforce HTTPS** on the Pages screen. The absolute URLs
+in `index.html` (og:image, og:url, and the form's `_next` redirect) already point
+at `shapangg.com`. The NFC tag should point at the custom domain too.
 
 ## Local preview
 
